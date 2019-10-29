@@ -34,9 +34,9 @@ final class DialogManager {
         builder.setPositiveButton(options.getPositiveText(context), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (options.getRateIntent() != null )
+                if (options.getRateIntent() != null && options.getRateIntent().getIntent() != null)
                 {
-                    final Intent intentToAppstore = options.getRateIntent();
+                    final Intent intentToAppstore = options.getRateIntent().getIntent();
                     context.startActivity(intentToAppstore);
                 }
                 else {
