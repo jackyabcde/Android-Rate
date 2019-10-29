@@ -30,6 +30,8 @@ public final class AppRate {
 
     private boolean isDebug = false;
 
+    private IRateIntent rateIntent = null;
+
     private AppRate(Context context) {
         this.context = context.getApplicationContext();
     }
@@ -213,5 +215,12 @@ public final class AppRate {
         this.isDebug = isDebug;
         return this;
     }
+
+    public AppRate setRateIntent(IRateIntent rateIntent) {
+        options.setRateIntent(rateIntent);
+        return this;
+    }
+
+
 
 }

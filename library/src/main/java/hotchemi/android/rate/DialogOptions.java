@@ -2,6 +2,7 @@ package hotchemi.android.rate;
 
 import android.content.Context;
 import android.view.View;
+import android.content.Intent;
 
 import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
@@ -41,6 +42,16 @@ final class DialogOptions {
     private View view;
 
     private Reference<OnClickButtonListener> listener;
+
+    public IRateIntent getRateIntent() {
+        return rateIntent;
+    }
+
+    public void setRateIntent(IRateIntent rateIntent) {
+        this.rateIntent = rateIntent;
+    }
+
+    private IRateIntent rateIntent = null;
 
     public boolean shouldShowNeutralButton() {
         return showNeutralButton;
